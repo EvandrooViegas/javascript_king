@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    color: white;
+    background: linear-gradient(45deg,
+     rgb(255, 169, 71),
+     rgb(255, 71, 71)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    color: black;
+    padding: 4rem 5rem;
+    border-radius: 6px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.20);
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form h1 {
+    border-bottom: 3px dotted #BBB;
+    
+    
+}
+.send {
+    display: grid;
+    grid-gap: 5px;
+}
+
+h4 {
+    color: #AAA;
+    align-self: flex-end;
+}
+
+
+form input {
+    outline: none;
+    background-color: #EEE;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+form button {
+    padding: 10px 6px;
+    background-color: rgb(251, 61, 61);
+    color: white;
+    border: none;
+    border-radius: 6px;
+}

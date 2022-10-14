@@ -1,0 +1,114 @@
+* {
+    box-sizing: content-box;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+nav {
+    color: black;
+    background-color: white;
+}
+nav.active {
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+nav,
+nav.active {
+    z-index: 1;
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.2);
+    transition: .4s;
+}
+
+
+
+nav .links {
+    margin-right: 10px;
+    display: flex;
+    gap: 40px;
+}
+
+nav .logo {
+    text-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+
+    font-size: 40px;
+}
+
+.hero {
+    background: url(https://images.unsplash.com/photo-1665398713005-478d88d54b0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 10vw;
+    text-align: center;
+    color: white;
+}
+
+.cards-container {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6vw;
+}
+
+.cards-container .card {
+
+    border: 1.4px dotted #CCC;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 3vw;
+    margin: 2rem 0rem;
+    border-radius: 4px;
+    transform: 0px;
+    opacity: 1;
+
+}
+
+.cards-container .card.animationOdd {
+    animation: fadeOdd 1s;
+}
+
+.cards-container .card.animationEven {
+    animation: fadeEven 1s;
+}
+
+
+@keyframes fadeEven {
+
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOdd {
+
+    from {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}

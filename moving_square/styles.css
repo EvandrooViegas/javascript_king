@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.square {
+    position: absolute;
+    bottom: 0px;
+    width: 6vh;
+    height: 6vh;
+    background-color: black;
+}
+
+.food {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    animation: rise-down 1s ease-in;
+}
+
+.container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    box-sizing: content-box;
+    border: 3px dotted red;
+}
+
+@keyframes rise-down {
+    from {
+        bottom: 100vh;
+    }
+
+    to {
+        bottom: 0;
+    }
+}
+
+.score {
+    position: relative;
+    z-index: -1;
+    font-size: 20vw;
+    text-align: center;
+}

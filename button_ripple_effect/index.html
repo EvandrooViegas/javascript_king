@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Ripple Effect</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            font-family: sans-serif;
+        }
+
+        .btn {
+            background-color: rgb(102, 97, 245);
+            padding: 20px 40px;
+            font-size: 25px;
+            color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            border-radius: 4px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .btn span {
+            z-index: 1;
+            position: relative;
+        }
+        .btn::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(43, 35, 255);
+            width: 0;
+            height: 0;
+            left: var(--xPos);
+            top: var(--yPos);
+            transform: translate(-50%, -50%);
+            border-radius: 100px;
+            transition: width .5s, height 0.5s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+    
+    </style>
+    <script defer src="script.js">
+        
+    </script>
+</head>
+<body>
+    <a href="#" class="btn" id="btn">
+        <span>Button</span>
+    </a>
+</body>
+</html>
